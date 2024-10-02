@@ -1,0 +1,10 @@
+{
+  "cacheDirectories": [
+    "views/node_modules"
+  ],
+  "scripts": {
+    "heroku-postbuild": "cd views && npm install --legacy-peer-deps && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

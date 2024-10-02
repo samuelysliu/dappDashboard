@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    environment:
+      - environment=main
+      - MONGO_URI=mongodb+srv://amazingWeb3Dapp_Samuel:SEyGm_ws_cEjKy3@dapp.zry1k.mongodb.net/admin?authSource=admin&replicaSet=atlas-f7yfk5-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
+      - REACT_APP_Environment=local
+    cpuset: "0-2"
